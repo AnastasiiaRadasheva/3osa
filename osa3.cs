@@ -227,10 +227,25 @@ namespace _3_osa
             string tulemus66 = funkosa3.KuniMarksona(marksona);
             Console.WriteLine(tulemus66);
 
+            ////6
+            //Console.WriteLine(" #6 Sisesta  arv:");
+            //int[] arvud = new int[4];
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    Console.WriteLine($"Sisesta {i + 1}. arv (0-9):");
+            //    arvud[i] = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine(funk.SuurimNeliarv(arvud));
+            ////7
+            //Console.WriteLine(" #7 Sisesta ridade arv:");
+            //int ridadeArv = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Sisesta veergude arv:");
+            //int veergudeArv = int.Parse(Console.ReadLine());
+            //funk.GenereeriKorrutustabel(ridadeArv, veergudeArv);
             //5
             while (true)
             {
-                funkosa3.ArvaArv();
+                funk.ArvaArv();
 
                 Console.Write("Kas soovid uuesti mängida? (jah/ei): ");
                 string vastus = Console.ReadLine().ToLower();
@@ -241,44 +256,6 @@ namespace _3_osa
                     break;
                 }
             }
-            //6
-            {
-                int[] arvud = new int[4];
-
-                Console.WriteLine("Sisesta 4 ühekohalist täisarvu (0-9):");
-
-                for (int i = 0; i < 4; i++)
-                {
-                    Console.Write($"Arv {i + 1}: ");
-                    if (!int.TryParse(Console.ReadLine(), out arvud[i]) || arvud[i] < 0 || arvud[i] > 9)
-                    {
-                        Console.WriteLine("Palun sisesta number 0 kuni 9.");
-                        i--; // Kordame veel kui sisestus oli vale
-                    }
-                }
-
-                int suurim = funkosa3.SuurimNeljarv(arvud);
-                Console.WriteLine($"Suurim neljakohaline arv on: {suurim}");
-            }
-
-            {
-                Console.Write("Ridade arv: ");
-                int read = int.Parse(Console.ReadLine());
-
-                Console.Write("Veergude arv: ");
-                int veerud = int.Parse(Console.ReadLine());
-
-                int[,] tabel = funkosa3.GenereeriKorrutustabel(read, veerud);
-
-                Console.Write("Sisesta arv a: ");
-                int a = int.Parse(Console.ReadLine());
-
-                Console.Write("Sisesta arv b: ");
-                int b = int.Parse(Console.ReadLine()); 
-
-                Console.WriteLine($"{a} x {b} = {funkosa3.OtsiTulemus(tabel, a, b)}");
-            }
-
 
         }
     }
